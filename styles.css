@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* 100% da altura da viewport */
+    width: 100vw; /* 100% da largura da viewport */
+}
+
+header {
+    background-color: #343a40;
+    padding: 20px;
+    height: 5%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+}
+
+.navbar-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+main {
+    height: 85%;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5%;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-links {
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .navbar-links a {
+        margin: 0 10px;
+    }
+}
+
+#collage {
+    height: 90%;
+}
+
+#collage hr{
+    border:none;
+    border-top:1px solid #333;
+    height:90%;
+}
+
+#collage #playPanel {
+	float:left;
+    width:99%;
+}
+
+#collage #actualImageBox {
+	float:right;
+    font-size:1em;
+    margin: 10px 10px;
+    vertical-align: top;
+    width:280px;
+	
+}
+
+#collage #stepBox div {
+    display:inline-block;
+    padding:20px 20px;
+	font-size:40px;
+    margin: 0px auto;
+	color:#555;
+	
+}
+
+#collage img#actualImage{
+    height:280px;
+    width:280px;
+	
+}
+
+#collage #sortable {
+	border:1px solid #999;
+    list-style-type: none;
+    margin: 10px;
+    padding: 0;
+    width: 700px;
+}
+
+#collage #sortable li {
+        display: inline-block;
+        background-size: 400% 400%;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        float: left; 
+        width: 100px;
+        height: 100px;
+    }
+
+#collage button  {
+    background-color:#f5f2f2;
+    border:1px solid #cce;
+    display: inline;
+    font-size: 14px;
+    height: auto;
+    width: auto;
+    padding: 3px 8px;
+}
