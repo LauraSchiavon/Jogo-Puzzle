@@ -2,7 +2,7 @@
 var imagePuzzle = {
     stepCount: 0,
     startGame: function (images, gridSize) {
-        this.setImage(images, gridSize);
+        this.setImage(images, 4);
         $('#playPanel').show();
         $('#sortable').randomize();
         this.enableSwapping('#sortable li');
@@ -48,7 +48,7 @@ var imagePuzzle = {
                 'background-image': 'url(' + image.src + ')',
                 'background-size': (gridSize * 100) + '%',
                 'background-position': xpos + ' ' + ypos,
-                'width': 700 / gridSize,
+                'width': 700 / gridSize ,
                 'height': 700 / gridSize
             });
             $('#sortable').append(li);

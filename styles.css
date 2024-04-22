@@ -9,8 +9,8 @@ body {
 
 header {
     background-color: #343a40;
-    padding: 20px;
-    height: 5%;
+    padding: 10px 10px 0 10px;
+    height: 8%;
 }
 
 .navbar {
@@ -67,8 +67,12 @@ footer {
     }
 }
 
+#playPanel {
+    height: 100%;
+}
+
 #collage {
-    height: 90%;
+    height: 100%;
 }
 
 #collage hr{
@@ -112,6 +116,7 @@ footer {
     margin: 10px;
     padding: 0;
     width: 700px;
+    height: 700px;
 }
 
 #collage #sortable li {
@@ -123,7 +128,7 @@ footer {
         padding: 0;
         float: left; 
         width: 100px;
-        height: 100px;
+        /* height: 100px; */
     }
 
 #collage button  {

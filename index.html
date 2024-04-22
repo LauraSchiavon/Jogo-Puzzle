@@ -27,8 +27,8 @@
 
     <main>
         <div id="collage">
-            <div id="playPanel" style="padding:5px;display:none;">
-                <div style="display:inline-block; margin:auto; width:95%; vertical-align:top;">
+            <div id="playPanel">
+                <div style="display:inline-block; margin:auto; width:100%; height: 100%; vertical-align:top;">
                     <div id="actualImageBox">
                         <div id="stepBox">
                             <div>Tentativas:</div><div class="stepCount">0</div>
@@ -39,7 +39,7 @@
                             <input type="radio" name="level" id="hard" checked="checked" value="3" /> <label for="hard">Imagem</label>
                         </p>
                     </div>
-                    <ul id="sortable" class="sortable"></ul>
+                    <div id="sortable" class="sortable"></div>
                 </div>
             </div>
             <div id="gameOver" style="display:none;">
@@ -55,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div style=" background: #000; color:#eee; padding:10px; text-align:center;"><h1><time>00:00:00</time></h1></div>
+        <div style=" background: #000; color:#eee; padding:10px; text-align:center;display: none;"><h1><time>00:00:00</time></h1></div>
     </main>
 
     <footer>
