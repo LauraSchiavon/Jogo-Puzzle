@@ -2,7 +2,7 @@
 var imagePuzzle = {
     stepCount: 0,
     startGame: function (images, gridSize) {
-        this.setImage(images, 4);
+        this.setImage(images, 5);
         $('#playPanel').show();
         $('#sortable').randomize();
         this.enableSwapping('#sortable li');
