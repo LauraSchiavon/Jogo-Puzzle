@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,14 +32,27 @@
                 <div style="display:flex; margin:auto; width:100%; height: 100%; vertical-align:top;">
                     <div id="actualImageBox">
                         <div id="stepBox">
-                            <div>Tentativas:</div><div class="stepCount">0</div>
+                            <div>Tentativas:</div>
+                            <div class="stepCount">0</div>
                         </div>
                         <img id="actualImage" />
                         <div>Você deverá recriar a imagem acima.</div>
                         <div onclick=""></div>
                         <p id="levelPanel">
-                            <input type="radio" name="level" id="hard" checked="checked" value="3" /> <label for="hard">Imagem</label>
+                            <input type="radio" name="level" id="hard" checked="checked" value="3" /> <label
+                                for="hard">Imagem</label>
                         </p>
+
+                        <div>Selecione o nível</div>
+                        <p id="levelPanel-niveis">
+                            <input type="radio" name="dificuldade" id="level1" value="2"
+                                onclick="minhaFuncao(this.value)" checked /> <label for="hard">Fácil</label>
+                            <input type="radio" name="dificuldade" id="level2" value="4"
+                                onclick="minhaFuncao(this.value)" /> <label for="medium">Médio</label>
+                            <input type="radio" name="dificuldade" id="level3" value="6"
+                                onclick="minhaFuncao(this.value)" /> <label for="hard">Difícil</label>
+                        </p>
+
                     </div>
                     <div id="sortable" class="sortable"></div>
                 </div>
@@ -56,7 +70,9 @@
                 </div>
             </div>
         </div>
-        <div style=" background: #000; color:#eee; padding:10px; text-align:center;display: none;"><h1><time>00:00:00</time></h1></div>
+        <div style=" background: #000; color:#eee; padding:10px; text-align:center;display: none;">
+            <h1><time>00:00:00</time></h1>
+        </div>
     </main>
 
     <footer>
@@ -72,9 +88,13 @@
             { src: 'images/taj-mahal.jpg' }
         ];
 
+        function minhaFuncao(gridSize) {
+            imagePuzzle.startGame(images, gridSize);
+        }
+
         $(function () {
             var gridSize = $('#levelPanel :radio:checked').val();
-            imagePuzzle.startGame(images, gridSize);
+            imagePuzzle.startGame(images, 2);
             $('#newPhoto').click(function () {
                 imagePuzzle.startGame(images, gridSize);
             });
@@ -102,7 +122,7 @@
                     hours++;
                 }
             }
-            
+
             h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
 
             timer();
@@ -113,9 +133,10 @@
         timer();
 
         /* Stop button */
-        stop.onclick = function() {
+        stop.onclick = function () {
             // Your stop button logic here
         }
     </script>
 </body>
+
 </html>

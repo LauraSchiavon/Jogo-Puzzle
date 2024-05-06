@@ -1,8 +1,7 @@
-﻿
-var imagePuzzle = {
+﻿var imagePuzzle = {
     stepCount: 0,
     startGame: function (images, gridSize) {
-        this.setImage(images, 5);
+        this.setImage(images, gridSize);
         $('#playPanel').show();
         $('#sortable').randomize();
         this.enableSwapping('#sortable li');
@@ -48,7 +47,7 @@ var imagePuzzle = {
                 'background-image': 'url(' + image.src + ')',
                 'background-size': (gridSize * 100) + '%',
                 'background-position': xpos + ' ' + ypos,
-                'width': 700 / gridSize ,
+                'width': 700 / gridSize,
                 'height': 700 / gridSize
             });
             $('#sortable').append(li);
@@ -64,6 +63,7 @@ function isSorted(arr) {
     }
     return true;
 }
+
 $.fn.randomize = function (selector) {
     var $elems = selector ? $(this).find(selector) : $(this).children(),
         $parents = $elems.parent();
