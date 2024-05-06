@@ -46,7 +46,7 @@
                         <div>Selecione o nível</div>
                         <p id="levelPanel-niveis">
                             <input type="radio" name="dificuldade" id="level1" value="2"
-                                onclick="minhaFuncao(this.value)" checked /> <label for="hard">Fácil</label>
+                                onclick="minhaFuncao(this.value)" /> <label for="level1">Fácil</label>
                             <input type="radio" name="dificuldade" id="level2" value="4"
                                 onclick="minhaFuncao(this.value)" /> <label for="medium">Médio</label>
                             <input type="radio" name="dificuldade" id="level3" value="6"
@@ -78,6 +78,11 @@
     <footer>
         <span>Todos os direitos reservados</span>
     </footer>
+
+    <script>
+        // Garante que o botão de rádio do nível fácil esteja sempre selecionado
+        document.getElementById('level1').checked = true;
+    </script>
 
     <script>
         var images = [
