@@ -18,15 +18,18 @@
             drop: function (event, ui) {
                 var $dragElem = $(ui.draggable).clone().replaceAll(this);
                 $(this).replaceAll(ui.draggable);
-
+    
                 currentList = $('#sortable > li').map(function (i, el) { return $(el).attr('data-value'); });
-                if (isSorted(currentList))
+                if (isSorted(currentList)) {
                     $('#actualImageBox').empty().html($('#gameOver').html());
-                else {
+                    // Atualiza o contador de passos
+                    imagePuzzle.stepCount++;
+                    $('.stepCount').text(imagePuzzle.stepCount);
+                } else {
                     imagePuzzle.stepCount++;
                     $('.stepCount').text(imagePuzzle.stepCount);
                 }
-
+    
                 imagePuzzle.enableSwapping(this);
                 imagePuzzle.enableSwapping($dragElem);
             }
