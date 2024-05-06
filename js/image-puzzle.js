@@ -47,8 +47,8 @@
                 'background-image': 'url(' + image.src + ')',
                 'background-size': (gridSize * 100) + '%',
                 'background-position': xpos + ' ' + ypos,
-                'width': 700 / gridSize,
-                'height': 700 / gridSize
+                'width': 530 / gridSize,
+                'height': 530 / gridSize
             });
             $('#sortable').append(li);
         }
