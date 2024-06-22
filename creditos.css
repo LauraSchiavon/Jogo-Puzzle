@@ -8,7 +8,6 @@ header {
     background-color: #343a40;
     color: #fff;
     padding: 20px;
-    text-align: center;
 }
 
 /* Estilos da Navbar */
@@ -29,6 +28,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    padding: 15px;
 }
 
 .navbar-links a {
@@ -36,7 +36,6 @@ header {
     text-decoration: none;
     margin-left: 15px;
     transition: color 0.3s ease;
-    padding: 15px;
 }
 
 .navbar-links a:hover {
@@ -48,37 +47,50 @@ main {
     text-align: center;
 }
 
-h1 {
-    margin-top: 20px;
+.image-container {
     text-align: center;
-    padding: 10px;
-    color: #28a745;
+    margin-bottom: 20px;
+}
+
+.image-container img {
+    max-width: 15%;
+    height: auto;
+    max-height: 400px; /* Ajuste conforme necessário */
 }
 
 .card-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 20px;
+    
 }
 
 .card {
-    width: 300px;
+    width: 330px;
     padding: 15px;
     margin: 10px;
     background-color: #28a745;
     border-radius: 5px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza conteúdo verticalmente */
+    align-items: center; /* Centraliza conteúdo horizontalmente */
 }
 
 h2 {
-    color: #ffff;
+    color: #fff;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 p {
     margin-top: 5px;
     color: #fff;
+
 }
+
 footer {
     background-color: #343a40;
     color: white;

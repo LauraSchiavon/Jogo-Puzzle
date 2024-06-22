@@ -13,10 +13,14 @@ header {
     height: 8%;
 }
 
+/* Estilos da Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #343a40;
+    padding: 15px;
+    color: white;
 }
 
 .logo img {
@@ -34,10 +38,19 @@ header {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #28a745; /* Cor verde para links ao passar o mouse */
 }
 
 main {
     height: 85%;
+}
+
+p {
+    margin-top: 5px;
 }
 
 footer {
