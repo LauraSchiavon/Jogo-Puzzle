@@ -2,13 +2,14 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
+    text-align: center; /* Centralizar o texto */
 }
 
 header {
     background-color: #343a40;
     color: #fff;
     padding: 20px;
-    text-align: center;
 }
 
 main {
@@ -20,7 +21,7 @@ section {
 }
 
 h1, h2 {
-    color: #343a40;
+    color: #28a745; /* Cor verde para os títulos */
 }
 
 h2 {
@@ -30,6 +31,8 @@ h2 {
 ul {
     list-style-type: none;
     padding: 0;
+    text-align: left; /* Alinhar o texto à esquerda dentro das listas */
+    display: inline-block; /* Centralizar a lista dentro da seção */
 }
 
 li {
@@ -40,6 +43,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo img {
@@ -57,10 +61,11 @@ li {
     color: white;
     text-decoration: none;
     margin-left: 15px;
+    transition: color 0.3s ease;
 }
 
-.main {
-    padding: 20px;
+.navbar-links a:hover {
+    color: #28a745; /* Cor verde para links ao passar o mouse */
 }
 
 .footer {
@@ -76,15 +81,16 @@ li {
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* Centralizar os itens da navbar */
     }
 
     .navbar-links {
         margin-top: 10px;
         justify-content: center;
+        padding: 0;
     }
 
     .navbar-links a {
-        margin: 0 10px;
+        margin: 5px 0;
     }
 }
